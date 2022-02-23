@@ -3,7 +3,7 @@
     <div class="view">
         <input class="toggle" type="checkbox" [formControl]="chkCompletado">
         <label (dblclick)="editar()">{{todo.texto}}</label>
-        <button class="destroy"></button>
+        <button (click)="borrar()" class="destroy"></button>
     </div>
     <input class="edit" type="text" [formControl]="textInput" (blur)="terminarEdicion()" #inputFisico>
 </li>
