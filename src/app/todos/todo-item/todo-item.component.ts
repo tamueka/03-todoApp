@@ -16,7 +16,7 @@ export class TodoItemComponent implements OnInit {
   @ViewChild('inputFisico') txtInputFisico: ElementRef;
   chkCompletado: FormControl;
   textInput: FormControl;
-  editando: boolean = false;
+  editando = false;
 
   constructor(private store: Store<AppState>) {}
 
