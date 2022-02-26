@@ -15,8 +15,8 @@ const _todoReducer = createReducer(
 
   on(borrar, (state, { id }) => state.filter((todo) => todo.id !== id)),
 
-  on(toggle, (state, { id }) => {
-    return state.map((todo) => {
+  on(toggle, (state, { id }) =>
+    state.map((todo) => {
       if (todo.id === id) {
         return {
           ...todo,
@@ -27,11 +27,11 @@ const _todoReducer = createReducer(
           ...todo,
         };
       }
-    });
-  }),
+    })
+  ),
 
-  on(editar, (state, { id, texto }) => {
-    return state.map((todo) => {
+  on(editar, (state, { id, texto }) =>
+    state.map((todo) => {
       if (todo.id === id) {
         return {
           ...todo,
@@ -42,8 +42,8 @@ const _todoReducer = createReducer(
           ...todo,
         };
       }
-    });
-  }),
+    })
+  ),
 
   on(togleAll, (state, { completado }) =>
     state.map((todo) => {
