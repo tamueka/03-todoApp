@@ -45,14 +45,14 @@ const _todoReducer = createReducer(
     });
   }),
 
-  on(togleAll, (state, { completado }) => {
-    return state.map((todo) => {
+  on(togleAll, (state, { completado }) =>
+    state.map((todo) => {
       return {
         ...todo,
-        completado: !completado,
+        completado,
       };
-    });
-  })
+    })
+  )
 );
 
 export function todoReducer(state, action) {
