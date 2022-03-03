@@ -1,4 +1,5 @@
 import { createAction, props } from '@ngrx/store';
+import { Todo } from '../todos/models/todo.models';
 
 export type filtrosValidos = 'todos' | 'completados' | 'pendientes';
 
